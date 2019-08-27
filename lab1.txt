@@ -1,0 +1,53 @@
+Python 3.7.3 (default, Apr  3 2019, 05:39:12) 
+[GCC 8.3.0] on linux
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> a="Hi Sahil"
+>>> a
+'Hi Sahil'
+>>> b="How are you?"
+>>> b
+'How are you?'
+>>> a+b
+'Hi SahilHow are you?'
+>>> b*b
+Traceback (most recent call last):
+  File "<pyshell#5>", line 1, in <module>
+    b*b
+TypeError: can't multiply sequence by non-int of type 'str'
+>>> b*2
+'How are you?How are you?'
+>>> len(a)
+8
+>>> len(b)
+12
+>>> a.upper()
+'HI SAHIL'
+>>> a.lower()
+'hi sahil'
+>>> a.title()
+'Hi Sahil'
+>>> a+b.title
+Traceback (most recent call last):
+  File "<pyshell#12>", line 1, in <module>
+    a+b.title
+TypeError: can only concatenate str (not "builtin_function_or_method") to str
+>>> a+b.title()
+'Hi SahilHow Are You?'
+>>> c=a+b
+>>> c
+'Hi SahilHow are you?'
+>>> c.upper()
+'HI SAHILHOW ARE YOU?'
+>>> c.title()
+'Hi Sahilhow Are You?'
+>>> z=c.replace{"Hi","Hello"}
+SyntaxError: invalid syntax
+>>> z='HI SAHIL'
+>>> A=z.replace('HI', 'HELLO')
+>>> A
+'HELLO SAHELLOL'
+>>> z='Hello Stud'
+>>> A=z.capitalize
+>>> A
+<built-in method capitalize of str object at 0x7fec71337130>
+>>> 
