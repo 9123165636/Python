@@ -1,0 +1,87 @@
+#GUESSING GAME
+
+import random 
+
+name = input("What is your name? ") 
+
+print("Good Luck ! ",name) 
+  
+number = '21'
+  
+print("Guess the number") 
+  
+guesses = '' 
+  
+
+turns = 3
+  
+while turns > 0: 
+      
+    # counts the number of times a user fails 
+    failed = 0
+       
+    for int in number:  
+          
+        if int in guesses:  
+            print(int) 
+              
+        else:  
+            print("_") 
+              
+            # for every failure 1 will be 
+            # incremented in failure 
+            failed += 1
+              
+  
+    if failed == 0: 
+        # user will win the game if failure is 0 
+        # and 'You Win' will be given as output 
+        print("You Win")  
+          
+        # this print the correct word 
+        print("The number is: ", number)  
+        break
+      
+    # if user has input the wrong number then 
+    # it will ask user to enter another number 
+    guess = input("guess a number:") 
+      
+    # every input character will be stored in guesses  
+    guesses += guess  
+      
+    # check input with the number
+    if guess not in number: 
+          
+        turns -= 1
+          
+        # if the number doesn’t match the word 
+        # then “Wrong” will be given as output  
+        print("Wrong") 
+          
+        # this will print the number of 
+        # turns left for the user 
+        print("You have", + turns, 'more guesses') 
+          
+          
+        if turns == 0: 
+            print("You Loose")
+What is your name? Sahil
+Good Luck !  Sahil
+Guess the number
+_
+_
+guess a number:3
+Wrong
+You have 2 more guesses
+_
+_
+guess a number:24
+Wrong
+You have 1 more guesses
+2
+_
+guess a number:21
+2
+1
+You Win
+The number is:  21
